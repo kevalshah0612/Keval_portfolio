@@ -1,15 +1,15 @@
 export const portfolioData = {
   personal: {
     name: "Keval Shah",
-    title: "Software Developer | MS CS @ Binghamton",
+    title: "Software Engineer | MS CS @ Binghamton",
     email: "kshah24@binghamton.edu",
     phone: "(607) 235-1181",
     location: "New York - Open to Relocate",
     linkedin: "https://www.linkedin.com/in/keval-shah0612/",
     github: "https://github.com/kevalshah0612",
     summary:
-      "Software Developer at TCS with 3.5+ years experience across 10+ enterprise projects, orchestrated data processing for 10M+ records, and 90% performance improvements using Java, Python, Spring Boot, React, Oracle, and AWS. Recognized leader with 5+ Star of the Month awards, certified full-stack training (ranked 1st), and end-to-end project ownership including CI/CD implementation. Graduate student with 4.0 GPA seeking Summer 2026 internships and full-time SDE roles, with expertise in scalable systems and security integration.",
-    seeking: "Summer 2026 internships and full-time SDE roles"
+      "Software Engineer with 4 years building production systems at scale. Delivered $1.2M savings and 92% performance gains through distributed system optimization. MS Computer Science student (GPA 4.00, May 2026) with hands-on experience in Java, Spring Boot, Python, React, and AWS. Seeking full-time Software Engineer roles starting May 2026.",
+    seeking: "Full-time Software Engineer roles starting May 2026"
   },
 
   // Optional core skills (not explicitly in resume but consistent)
@@ -25,75 +25,142 @@ export const portfolioData = {
   experience: [
     {
       id: 1,
-      title: "Teaching Assistant - Database Systems (CS 432/532)",
+      title: "Teaching Assistant",
       company: "Binghamton University, State University of New York",
       location: "Binghamton, NY",
       duration: "Aug 2025 - Present",
       description: [
-        "Redesigned database curriculum with faculty and created course materials, improving student learning outcomes",
-        "Conducted TA sessions explaining database concepts (normalization, indexing, query optimization) to students",
-        "Graded assignments and projects using detailed rubrics, providing constructive feedback to enhance understanding"
+        "Mentor 150+ students across two core CS courses, leading labs, office hours, and code reviews on SQL, query optimization, OOP design patterns, and clean code practices",
+        "Developed structured feedback rubrics and hands-on exercises that improved average assignment scores by 18%"
       ],
       current: true
     },
     {
       id: 2,
-      title: "Software Developer (Volunteer)",
+      title: "Software Engineer Intern",
       company: "Global Health Impact (GHI)",
-      location: "New York, NY (Remote/Volunteer Role)",
+      location: "Binghamton, NY",
       duration: "Jun 2025 - Aug 2025",
       description: [
-        "Engineered Flask REST APIs to process disease data for 180+ countries by orchestrating data aggregation pipelines and devising predictive models for epidemiological trends",
-        "Developed interactive React dashboards for real-time geographic visualizations and analytics, incorporating UI/UX feedback to expand platform coverage to regional and national reporting",
-        "Authored and documented 8+ API endpoints and dashboards for international public health teams, creating user training materials and providing post-launch support to ensure system reliability"
+        "Automated health analytics processing 10M+ weekly records across 180+ countries, eliminating 95% of manual reporting work through Flask REST APIs and Python microservices",
+        "Drove 40% user growth by designing React/TypeScript dashboards with role-based access and drill-down analytics based on stakeholder feedback",
+        "Increased pipeline reliability from 85% to 96% uptime through schema validation, monitoring alerts, and retry logic"
       ],
       current: false
     },
     {
       id: 3,
-      title: "System Engineer",
-      company: "Tata Consultancy Services",
-      location: "India",
-      duration: "Oct 2022 - Dec 2024",
+      title: "Software Engineer",
+      company: "Tata Consultancy Services (TCS)",
+      location: "Gandhinagar, India",
+      duration: "Mar 2021 - Dec 2024",
       description: [
-        "Led full-stack development and tech stack upgrades for 10+ enterprise applications by implementing modern frameworks and architectures, improving performance and compatibility",
-        "Implemented multithreading architecture for high-resolution PDF file upload processes in legacy applications, achieving 90% faster processing time and $1.2M annual cost savings",
-        "Optimized data processing systems handling 10M+ records per batch using custom functionality with database and SharePoint API integration, streamlining data storage and retrieval"
+        "Accelerated 3D PDF ingestion 92% (4min → 20sec) delivering $1.2M annual savings by engineering multithreaded Java/Spring Boot pipeline with parallel I/O and memory-mapped file handling",
+        "Scaled distributed microservices to 50K+ daily requests at 99.9% uptime, handling 5× traffic spikes through Redis caching, connection pooling, and async processing",
+        "Shortened release cycles 60% (5 days → 2 days) while maintaining 99.5% uptime by standardizing GitHub Actions CI/CD with automated testing across 7 microservices",
+        "Eliminated 500+ critical and high-severity vulnerabilities by integrating SAST scanning (SonarQube) into CI/CD workflows, reducing production security exposure by 85% and meeting compliance requirements",
+        "Rescued production functionality within 3 days by implementing certificate-based authentication after unexpected API deprecation"
       ],
       current: false
-    },
-    {
-      id: 4,
-      title: "Assistant System Engineer",
-      company: "Tata Consultancy Services",
-      location: "India",
-      duration: "Mar 2021 - Sep 2022",
-      description: [
-        "Enhanced security infrastructure across 10+ projects by integrating SSL and SAST tools and developing custom SharePoint authentication solutions, strengthening security and modernizing legacy systems",
-        "Established CI/CD pipelines for 10+ projects with automated deployment processes and AWS infrastructure management (RDS, EC2, S3), enabling seamless operations and successful server migrations from CentOS to AL2/AL3",
-        "Managed complete project lifecycle and stakeholder communication via weekly client meetings and comprehensive documentation, earning 5+ Star of the Month awards"
-      ],
-      current: false
-    },
-    {
-      id: 5,
-      title: "Technical Mentor & Presenter",
-      company: "Tata Consultancy Services",
-      location: "India",
-      duration: "Sep 2024 - Nov 2024",
-      description: [
-        "Led technology learning sessions for 300+ junior developers and conducted T-Factor training, achieving a 4.39 score",
-        "Mentored junior developers during full-stack training, providing MERN stack guidance and securing first-rank certification",
-        "Managed end-to-end delivery of 40+ production releases on schedule through weekly stakeholder communication and comprehensive project lifecycle oversight including documentation and CI/CD implementation"
-      ],
-      current: false,
-      isLeadership: true
     }
   ],
 
   projects: [
+    // NEW PROJECTS FROM RESUME
     {
       id: 1,
+      title: "Key-Value Database in C with Crash Recovery",
+      description:
+        "Designed crash-safe KV store achieving 20K+ ops/sec with zero data loss using hash-indexed storage, WAL, and multithreaded handlers.",
+      technologies: [
+        "C",
+        "POSIX Threads",
+        "Hash Indexing",
+        "Write-Ahead Logging",
+        "Multithreading"
+      ],
+      duration: "Recent",
+      highlights: [
+        "Achieved 20K+ operations per second with zero data loss",
+        "Implemented hash-indexed storage with Write-Ahead Logging (WAL)",
+        "Built multithreaded handlers for concurrent request processing"
+      ],
+      icon: "fas fa-database",
+      status: "Completed",
+      type: "Solo Developer"
+    },
+    {
+      id: 2,
+      title: "Distributed URL Shortener and Analytics Platform",
+      description:
+        "Architected full-stack microservices platform with p95 latency <50ms at 1K req/sec and 75% faster deployments.",
+      technologies: [
+        "Node.js",
+        "TypeScript",
+        "Redis",
+        "PostgreSQL",
+        "Docker",
+        "GCP",
+        "Microservices"
+      ],
+      duration: "Recent",
+      highlights: [
+        "Achieved p95 latency <50ms at 1000 requests per second",
+        "Reduced deployment time by 75% through containerization",
+        "Built analytics tracking with Redis caching and PostgreSQL persistence"
+      ],
+      icon: "fas fa-link",
+      status: "Completed",
+      type: "Solo Developer"
+    },
+    {
+      id: 3,
+      title: "AI-Powered Q&A Chatbot",
+      description:
+        "Deployed serverless chatbot with persistent conversation history using edge computing and LLM integration.",
+      technologies: [
+        "TypeScript",
+        "Cloudflare Workers",
+        "Llama 3.1-8B",
+        "Edge Computing",
+        "Serverless"
+      ],
+      duration: "Recent",
+      highlights: [
+        "Deployed serverless architecture using Cloudflare Workers at the edge",
+        "Integrated Llama 3.1-8B for natural language understanding",
+        "Implemented persistent conversation history for context-aware responses"
+      ],
+      icon: "fas fa-robot",
+      status: "Completed",
+      type: "Solo Developer",
+      github: "https://github.com/kevalshah0612"
+    },
+    {
+      id: 4,
+      title: "CNN Image Classifier",
+      description:
+        "Trained ShallowCNN (545K params) and DeepCNN (919K params) reaching ~80% accuracy through hypothesis testing on regularization and optimizers.",
+      technologies: [
+        "PyTorch",
+        "scikit-learn",
+        "CNNs",
+        "Deep Learning",
+        "Python"
+      ],
+      duration: "Recent",
+      highlights: [
+        "Achieved ~80% accuracy on image classification task",
+        "Trained both ShallowCNN (545K parameters) and DeepCNN (919K parameters)",
+        "Conducted hypothesis testing on regularization techniques and optimizers"
+      ],
+      icon: "fas fa-brain",
+      status: "Completed",
+      type: "Academic Project"
+    },
+    // EXISTING PROJECTS (KEPT AS IS)
+    {
+      id: 5,
       title: "Event & Finance Management System",
       description:
         "Designed and developed a group expense management platform with 12+ features including bill splitting, payment tracking, and shared financial visibility for seamless expense management among groups.",
@@ -116,7 +183,7 @@ export const portfolioData = {
       type: "Co-Developer"
     },
     {
-      id: 2,
+      id: 6,
       title: "Hospital Management System",
       description:
         "Built a healthcare management system with 10+ modules including appointment scheduling, patient records, billing, and inventory for multiple user roles.",
@@ -136,19 +203,18 @@ export const portfolioData = {
       status: "Completed",
       type: "Co-Developer"
     }
-    // Smart Irrigation IoT System is not on this resume version, so removed
   ],
 
-  // You can also add an education section to feed into the portfolio if you need it in UI
+  // Education section
   education: [
     {
       degree: "Master of Science in Computer Science",
       school: "Binghamton University, State University of New York",
       location: "Binghamton, NY",
-      duration: "Expected Dec 2026",
+      duration: "Jan 2025 - May 2026",
       gpa: "4.00/4.00",
       details: [
-        "Relevant Coursework: Database Systems, Design & Analysis of Algorithms, Programming Languages, Machine Learning, Programming for the Web, Systems Programming"
+        "Relevant Coursework: Artificial Intelligence, Machine Learning, NLP, Computer Vision, Algorithms, Systems Programming"
       ]
     },
     {
@@ -156,7 +222,7 @@ export const portfolioData = {
       school: "Gujarat Technological University",
       location: "Gujarat, India",
       duration: "Aug 2016 - Sep 2020",
-      gpa: null,
+      gpa: "3.85/4.00",
       details: []
     }
   ],
@@ -169,74 +235,73 @@ export const portfolioData = {
       "C++",
       "TypeScript",
       "SQL",
-      "Go",
-      "C",
-      "PL/SQL"
+      "C"
     ],
-    "Software Development & Systems": [
-      "Large Software Systems",
-      "Distributed Systems",
-      "Web Application Development",
-      "Algorithm Development",
-      "Software Engineering",
-      "Parallel Systems",
-      "Automation Infrastructure",
-      "Natural Language Processing",
-      "UI"
-    ],
-    "Operating Systems & Environments": [
-      "Unix/Linux Environments",
-      "Shell Scripting",
-      "System Programming",
-      "Command Line Tools",
-      "Windows"
-    ],
-    "Data Structures & Algorithms": [
-      "Algorithm Design & Analysis",
-      "Data Structures",
-      "Performance Optimization",
-      "Computer Science Fundamentals"
-    ],
-    "Cloud/DevOps/Infrastructure": [
-      "AWS (EC2, S3, RDS)",
-      "Docker",
-      "CI/CD Pipelines",
-      "Jenkins",
-      "Git",
-      "System Design",
-      "Unix/Linux",
-      "Networking"
-    ],
-    "Development & Deployment": [
+    "Backend Development": [
       "Spring Boot",
-      "Microservices",
-      "RESTful APIs",
+      "Spring Security",
       "Node.js",
-      "Spring MVC"
+      "Express.js",
+      "Flask",
+      "REST APIs",
+      "GraphQL",
+      "Microservices"
     ],
-    "Data/AI/ML & Databases": [
+    "Frontend Development": [
+      "React",
+      "Angular",
+      "HTML5",
+      "CSS3",
+      "TypeScript"
+    ],
+    "Cloud & DevOps": [
+      "AWS (EC2, S3, RDS, Lambda, CloudWatch)",
+      "GCP",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "GitHub Actions",
+      "CI/CD"
+    ],
+    "Databases": [
       "PostgreSQL",
       "MySQL",
-      "Machine Learning",
-      "MongoDB",
-      "Artificial Intelligence",
-      "TensorFlow",
       "Oracle",
-      "Pandas",
-      "NumPy"
+      "Redis",
+      "MongoDB"
+    ],
+    "Tools & Testing": [
+      "Git",
+      "Maven",
+      "JUnit",
+      "PyTest",
+      "Jest",
+      "k6",
+      "Linux",
+      "Agile",
+      "TDD"
+    ],
+    "AI & Machine Learning": [
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "NLP (Transformers, BERT)",
+      "CNNs",
+      "GANs",
+      "LLM APIs"
     ]
   },
 
   achievements: [
+    "Delivered $1.2M annual savings through 92% performance optimization of PDF processing pipeline",
+    "Scaled distributed systems to 50K+ daily requests at 99.9% uptime with 5× traffic spike handling",
+    "Reduced release cycles by 60% while maintaining 99.5% uptime across 7 microservices",
+    "Eliminated 500+ security vulnerabilities, reducing production exposure by 85%",
+    "Drove 40% user growth through React/TypeScript dashboards at Global Health Impact",
+    "Improved student assignment scores by 18% through structured feedback and hands-on exercises",
+    "Maintained perfect 4.0 GPA in MS Computer Science program with AI specialization",
     "5+ Star of the Month awards at TCS for exceptional project delivery and client satisfaction",
     "Ranked 1st in TCS full-stack development certification program out of 200+ participants",
-    "Led and contributed to 10+ enterprise-scale projects with multi-million dollar impact",
-    "Achieved 90% performance improvements through system optimization and multithreading architecture redesign",
-    "Maintained a perfect 4.0 GPA in Master's program at SUNY Binghamton while serving as Teaching Assistant",
-    "T-Factor training achievement with 4.39 score demonstrating technical capability and learning agility",
-    "Consistently ranked among top 3 contenders in TCS hackathons",
-    "Led technology learning sessions for 300+ junior developers at TCS",
-    "Managed end-to-end delivery of 40+ production releases on schedule with full CI/CD and documentation ownership",
-    "Orchestrated data processing for 10M+ records per batch using optimized data pipelines and API integrations"
+    "Led technology learning sessions for 300+ junior developers at TCS"
   ]
 };
