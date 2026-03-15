@@ -65,49 +65,55 @@ export const portfolioData = {
   ],
 
   projects: [
-    {
+        {
       id: 1,
-      title: "Key-Value Database in C with Crash Recovery",
+      title: "FinSafe Transaction Intelligence Platform",
       description:
-        "Designed a crash-safe key-value store using hash-indexed storage, Write-Ahead Logging, and multithreaded request handling for reliable concurrent operations.",
+        "Constructed a Dockerized transaction intelligence platform combining React, Node.js, and Python FastAPI services for categorization, anomaly detection, fraud signals, and spending insights.",
       technologies: [
-        "C",
-        "POSIX Threads",
-        "Hash Indexing",
-        "Write-Ahead Logging",
-        "Multithreading"
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "Python FastAPI",
+        "scikit-learn",
+        "pandas",
+        "NumPy",
+        "Docker"
       ],
       duration: "Recent",
       highlights: [
-        "Implemented crash recovery with Write-Ahead Logging to preserve data integrity across failures",
-        "Built hash-indexed storage for efficient key lookup and update paths",
-        "Added multithreaded handlers for concurrent request processing"
+        "Built a 3-service platform that produced real-time risk-scored outputs across 12 financial categories",
+        "Developed an inference pipeline with 6 scikit-learn models for classification, anomaly detection, fraud signal detection, and spend forecasting",
+        "Combined concurrent REST APIs with containerized deployment for modular and production-style system design"
       ],
-      icon: "fas fa-database",
+      icon: "fas fa-chart-line",
       status: "Completed",
       type: "Solo Developer"
     },
     {
       id: 2,
-      title: "Distributed URL Shortener and Analytics Platform",
+      title: "CareerLens Job Intelligence Platform",
       description:
-        "Built a distributed URL shortener with analytics, using Redis for fast redirects and PostgreSQL for durable link storage.",
+        "Engineered a job intelligence platform that ingests job postings, matches them semantically, and returns ranked recommendations with low-latency retrieval.",
       technologies: [
-        "Node.js",
-        "TypeScript",
-        "Redis",
+        "Java",
+        "Spring Boot",
+        "Kafka",
         "PostgreSQL",
-        "Docker",
-        "GCP",
-        "Microservices"
+        "pgvector",
+        "Redis",
+        "React.js",
+        "TypeScript",
+        "Kubernetes",
+        "Python FastAPI"
       ],
       duration: "Recent",
       highlights: [
-        "Handled 1,000+ redirect requests in load tests with Redis-backed redirect flows",
-        "Containerized services with Docker for simpler deployment and environment consistency",
-        "Implemented analytics tracking with PostgreSQL persistence and caching for high-traffic links"
+        "Built a Kafka-driven ingestion pipeline to normalize postings from 3+ sources into a unified schema",
+        "Deployed a semantic matching service using pgvector similarity search, Redis caching, and FastAPI",
+        "Delivered ranked job recommendations with an architecture designed for low-latency search and scalable indexing"
       ],
-      icon: "fas fa-link",
+      icon: "fas fa-briefcase",
       status: "Completed",
       type: "Solo Developer"
     },
@@ -199,58 +205,6 @@ export const portfolioData = {
       icon: "fas fa-hospital",
       status: "Completed",
       type: "Co-Developer"
-    },
-    {
-      id: 7,
-      title: "FinSafe Transaction Intelligence Platform",
-      description:
-        "Constructed a Dockerized transaction intelligence platform combining React, Node.js, and Python FastAPI services for categorization, anomaly detection, fraud signals, and spending insights.",
-      technologies: [
-        "React.js",
-        "TypeScript",
-        "Node.js",
-        "Python FastAPI",
-        "scikit-learn",
-        "pandas",
-        "NumPy",
-        "Docker"
-      ],
-      duration: "Recent",
-      highlights: [
-        "Built a 3-service platform that produced real-time risk-scored outputs across 12 financial categories",
-        "Developed an inference pipeline with 6 scikit-learn models for classification, anomaly detection, fraud signal detection, and spend forecasting",
-        "Combined concurrent REST APIs with containerized deployment for modular and production-style system design"
-      ],
-      icon: "fas fa-chart-line",
-      status: "Completed",
-      type: "Solo Developer"
-    },
-    {
-      id: 8,
-      title: "CareerLens Job Intelligence Platform",
-      description:
-        "Engineered a job intelligence platform that ingests job postings, matches them semantically, and returns ranked recommendations with low-latency retrieval.",
-      technologies: [
-        "Java",
-        "Spring Boot",
-        "Kafka",
-        "PostgreSQL",
-        "pgvector",
-        "Redis",
-        "React.js",
-        "TypeScript",
-        "Kubernetes",
-        "Python FastAPI"
-      ],
-      duration: "Recent",
-      highlights: [
-        "Built a Kafka-driven ingestion pipeline to normalize postings from 3+ sources into a unified schema",
-        "Deployed a semantic matching service using pgvector similarity search, Redis caching, and FastAPI",
-        "Delivered ranked job recommendations with an architecture designed for low-latency search and scalable indexing"
-      ],
-      icon: "fas fa-briefcase",
-      status: "Completed",
-      type: "Solo Developer"
     }
   ],
 
