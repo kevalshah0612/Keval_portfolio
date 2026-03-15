@@ -4,22 +4,22 @@ export const portfolioData = {
     title: "Software Engineer | MS CS @ Binghamton",
     email: "kshah24@binghamton.edu",
     phone: "(607) 235-1181",
-    location: "New York - Open to Relocate",
+    location: "Binghamton, NY - Open to Relocate",
     linkedin: "https://www.linkedin.com/in/keval-shah0612/",
     github: "https://github.com/kevalshah0612",
+    portfolio: "https://keval-portfolio.vercel.app",
     summary:
-      "Software Engineer with 4 years building production systems at scale. Delivered $1.2M savings and 92% performance gains through distributed system optimization. MS Computer Science student (GPA 4.00, May 2026) with hands-on experience in Java, Spring Boot, Python, React, and AWS. Seeking full-time Software Engineer roles starting May 2026.",
+      "Software Engineer with 4 years of experience building distributed systems, backend platforms, and data-driven products. Currently pursuing an MS in Computer Science at Binghamton University (GPA 4.00) with hands-on experience in Java, Spring Boot, Python, React, cloud infrastructure, and machine learning. Seeking full-time Software Engineer roles starting May 2026.",
     seeking: "Full-time Software Engineer roles starting May 2026"
   },
 
-  // Optional core skills (not explicitly in resume but consistent)
   coreSkills: [
-    { name: "Full-Stack Development", level: 95 },
-    { name: "Java & Spring Boot", level: 93 },
-    { name: "Python & Flask/Django", level: 88 },
-    { name: "React & Angular", level: 90 },
-    { name: "AWS & Cloud Services", level: 87 },
-    { name: "Database Systems & Optimization", level: 91 }
+    { name: "Backend Engineering", level: 95 },
+    { name: "Java & Spring Boot", level: 94 },
+    { name: "Python & FastAPI/Flask", level: 91 },
+    { name: "React & TypeScript", level: 89 },
+    { name: "Cloud & DevOps", level: 88 },
+    { name: "Databases & Distributed Systems", level: 92 }
   ],
 
   experience: [
@@ -30,48 +30,46 @@ export const portfolioData = {
       location: "Binghamton, NY",
       duration: "Aug 2025 - Present",
       description: [
-        "Mentor 150+ students across two core CS courses, leading labs, office hours, and code reviews on SQL, query optimization, OOP design patterns, and clean code practices",
-        "Developed structured feedback rubrics and hands-on exercises that improved average assignment scores by 18%"
+        "Mentor 120+ students across Database Management and Object-Oriented Programming, leading code reviews and debugging sessions in C++, Java, SQL, concurrency, and database design"
       ],
       current: true
     },
     {
       id: 2,
-      title: "Software Engineer Intern",
-      company: "Global Health Impact (GHI)",
-      location: "Binghamton, NY",
+      title: "Software Engineering Intern",
+      company: "Global Health Impact",
+      location: "New York",
       duration: "Jun 2025 - Aug 2025",
       description: [
-        "Automated health analytics processing 10M+ weekly records across 180+ countries, eliminating 95% of manual reporting work through Flask REST APIs and Python microservices",
-        "Drove 40% user growth by designing React/TypeScript dashboards with role-based access and drill-down analytics based on stakeholder feedback",
-        "Increased pipeline reliability from 85% to 96% uptime through schema validation, monitoring alerts, and retry logic"
+        "Architected Python FastAPI REST APIs with OAuth and JWT authentication across 4 backend services, connecting a TypeScript and React frontend to real-time disease burden predictions that cut data analysis turnaround from hours to seconds",
+        "Spearheaded development and deployment of Python scikit-learn machine learning models on GCP, training on WHO health data to forecast country-level disease impact scores and reduce manual reporting effort by 90%",
+        "Pioneered Python ETL pipelines across 5+ disease categories that eliminated manual data transformation steps and delivered machine learning-ready datasets for the organization's first predictive analytics dashboard"
       ],
       current: false
     },
     {
       id: 3,
       title: "Software Engineer",
-      company: "Tata Consultancy Services (TCS)",
-      location: "Gandhinagar, India",
+      company: "Tata Consultancy Services (Wabtec Corporation)",
+      location: "India",
       duration: "Mar 2021 - Dec 2024",
       description: [
-        "Accelerated 3D PDF ingestion 92% (4min → 20sec) delivering $1.2M annual savings by engineering multithreaded Java/Spring Boot pipeline with parallel I/O and memory-mapped file handling",
-        "Scaled distributed microservices to 50K+ daily requests at 99.9% uptime, handling 5× traffic spikes through Redis caching, connection pooling, and async processing",
-        "Shortened release cycles 60% (5 days → 2 days) while maintaining 99.5% uptime by standardizing GitHub Actions CI/CD with automated testing across 7 microservices",
-        "Eliminated 500+ critical and high-severity vulnerabilities by integrating SAST scanning (SonarQube) into CI/CD workflows, reducing production security exposure by 85% and meeting compliance requirements",
-        "Rescued production functionality within 3 days by implementing certificate-based authentication after unexpected API deprecation"
+        "Unified distributed role-based access control with Spring Security across 10 Java Spring Boot microservices, integrating MySQL and NoSQL sources and reducing access-related support tickets by 22%",
+        "Drove AWS cloud cost optimization across 10 enterprise applications using Python cleanup scripts, Datadog observability, Docker, and Kubernetes lifecycle management, saving $18K per month",
+        "Transformed a broken legacy Java application into a production-ready distributed system in 2 months by upgrading to Java 11 and introducing Redis caching, improving response time by 30% and reducing user incidents by 19%",
+        "Engineered a Java multithreaded concurrent file upload system for Microsoft SharePoint serving 10K+ users, cutting upload time from 60 seconds to 10 seconds, and led a 5-member team to resolve a live authentication outage in 2 days via a custom OAuth solution",
+        "Established GitLab CI/CD as the unit-wide delivery standard by building Python automation from scratch, streamlining Agile sprint releases to deliver 40+ production deployments with zero-downtime rollback capability"
       ],
       current: false
     }
   ],
 
   projects: [
-    // NEW PROJECTS FROM RESUME
     {
       id: 1,
       title: "Key-Value Database in C with Crash Recovery",
       description:
-        "Designed crash-safe KV store achieving 20K+ ops/sec with zero data loss using hash-indexed storage, WAL, and multithreaded handlers.",
+        "Designed a crash-safe key-value store using hash-indexed storage, Write-Ahead Logging, and multithreaded request handling for reliable concurrent operations.",
       technologies: [
         "C",
         "POSIX Threads",
@@ -81,9 +79,9 @@ export const portfolioData = {
       ],
       duration: "Recent",
       highlights: [
-        "Achieved 20K+ operations per second with zero data loss",
-        "Implemented hash-indexed storage with Write-Ahead Logging (WAL)",
-        "Built multithreaded handlers for concurrent request processing"
+        "Implemented crash recovery with Write-Ahead Logging to preserve data integrity across failures",
+        "Built hash-indexed storage for efficient key lookup and update paths",
+        "Added multithreaded handlers for concurrent request processing"
       ],
       icon: "fas fa-database",
       status: "Completed",
@@ -93,7 +91,7 @@ export const portfolioData = {
       id: 2,
       title: "Distributed URL Shortener and Analytics Platform",
       description:
-        "Architected full-stack microservices platform with p95 latency <50ms at 1K req/sec and 75% faster deployments.",
+        "Built a distributed URL shortener with analytics, using Redis for fast redirects and PostgreSQL for durable link storage.",
       technologies: [
         "Node.js",
         "TypeScript",
@@ -105,9 +103,9 @@ export const portfolioData = {
       ],
       duration: "Recent",
       highlights: [
-        "Achieved p95 latency <50ms at 1000 requests per second",
-        "Reduced deployment time by 75% through containerization",
-        "Built analytics tracking with Redis caching and PostgreSQL persistence"
+        "Handled 1,000+ redirect requests in load tests with Redis-backed redirect flows",
+        "Containerized services with Docker for simpler deployment and environment consistency",
+        "Implemented analytics tracking with PostgreSQL persistence and caching for high-traffic links"
       ],
       icon: "fas fa-link",
       status: "Completed",
@@ -117,7 +115,7 @@ export const portfolioData = {
       id: 3,
       title: "AI-Powered Q&A Chatbot",
       description:
-        "Deployed serverless chatbot with persistent conversation history using edge computing and LLM integration.",
+        "Deployed a serverless chatbot with persistent conversation history using edge infrastructure and LLM-based response generation.",
       technologies: [
         "TypeScript",
         "Cloudflare Workers",
@@ -127,8 +125,8 @@ export const portfolioData = {
       ],
       duration: "Recent",
       highlights: [
-        "Deployed serverless architecture using Cloudflare Workers at the edge",
-        "Integrated Llama 3.1-8B for natural language understanding",
+        "Deployed a serverless architecture using Cloudflare Workers",
+        "Integrated Llama 3.1-8B for natural language question answering",
         "Implemented persistent conversation history for context-aware responses"
       ],
       icon: "fas fa-robot",
@@ -140,7 +138,7 @@ export const portfolioData = {
       id: 4,
       title: "CNN Image Classifier",
       description:
-        "Trained ShallowCNN (545K params) and DeepCNN (919K params) reaching ~80% accuracy through hypothesis testing on regularization and optimizers.",
+        "Trained CNN models for image classification and evaluated architectural tradeoffs across regularization and optimization strategies.",
       technologies: [
         "PyTorch",
         "scikit-learn",
@@ -150,20 +148,19 @@ export const portfolioData = {
       ],
       duration: "Recent",
       highlights: [
-        "Achieved ~80% accuracy on image classification task",
-        "Trained both ShallowCNN (545K parameters) and DeepCNN (919K parameters)",
-        "Conducted hypothesis testing on regularization techniques and optimizers"
+        "Trained ShallowCNN and DeepCNN architectures for comparative evaluation",
+        "Reached around 80% classification accuracy on the target dataset",
+        "Tested the impact of regularization methods and optimizer choices on performance"
       ],
       icon: "fas fa-brain",
       status: "Completed",
       type: "Academic Project"
     },
-    // EXISTING PROJECTS (KEPT AS IS)
     {
       id: 5,
       title: "Event & Finance Management System",
       description:
-        "Designed and developed a group expense management platform with 12+ features including bill splitting, payment tracking, and shared financial visibility for seamless expense management among groups.",
+        "Designed and developed a group expense management platform with bill splitting, payment tracking, and shared financial visibility for collaborative expense handling.",
       technologies: [
         "Spring Boot",
         "Angular",
@@ -175,8 +172,8 @@ export const portfolioData = {
       ],
       duration: "Jun 2025 - Present",
       highlights: [
-        "Designed group expense management platform with 12+ features including bill splitting, payment tracking, and shared financial visibility",
-        "Built scalable microservices API with JWT authentication handling 1000+ concurrent transactions and secure user data access"
+        "Built 12+ features including bill splitting, payment tracking, and shared expense visibility",
+        "Developed a secure microservices API with JWT authentication for multi-user workflows"
       ],
       icon: "fas fa-credit-card",
       status: "In Development",
@@ -186,7 +183,7 @@ export const portfolioData = {
       id: 6,
       title: "Hospital Management System",
       description:
-        "Built a healthcare management system with 10+ modules including appointment scheduling, patient records, billing, and inventory for multiple user roles.",
+        "Built a healthcare management system supporting appointments, billing, records, and inventory across multiple user roles.",
       technologies: [
         "Java",
         "Spring Boot",
@@ -196,32 +193,84 @@ export const portfolioData = {
       ],
       duration: "Mar 2024 - Apr 2024",
       highlights: [
-        "Built healthcare management system with 10+ modules including appointment scheduling, patient records, and billing for 3 user roles",
-        "Implemented Role-Based Access Control with AES encryption across 8 database tables for patient, doctor, and admin accounts"
+        "Implemented 10+ modules including appointments, patient records, billing, and inventory",
+        "Added role-based access control and AES encryption across 8 database tables"
       ],
       icon: "fas fa-hospital",
       status: "Completed",
       type: "Co-Developer"
+    },
+    {
+      id: 7,
+      title: "FinSafe Transaction Intelligence Platform",
+      description:
+        "Constructed a Dockerized transaction intelligence platform combining React, Node.js, and Python FastAPI services for categorization, anomaly detection, fraud signals, and spending insights.",
+      technologies: [
+        "React.js",
+        "TypeScript",
+        "Node.js",
+        "Python FastAPI",
+        "scikit-learn",
+        "pandas",
+        "NumPy",
+        "Docker"
+      ],
+      duration: "Recent",
+      highlights: [
+        "Built a 3-service platform that produced real-time risk-scored outputs across 12 financial categories",
+        "Developed an inference pipeline with 6 scikit-learn models for classification, anomaly detection, fraud signal detection, and spend forecasting",
+        "Combined concurrent REST APIs with containerized deployment for modular and production-style system design"
+      ],
+      icon: "fas fa-chart-line",
+      status: "Completed",
+      type: "Solo Developer"
+    },
+    {
+      id: 8,
+      title: "CareerLens Job Intelligence Platform",
+      description:
+        "Engineered a job intelligence platform that ingests job postings, matches them semantically, and returns ranked recommendations with low-latency retrieval.",
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "Kafka",
+        "PostgreSQL",
+        "pgvector",
+        "Redis",
+        "React.js",
+        "TypeScript",
+        "Kubernetes",
+        "Python FastAPI"
+      ],
+      duration: "Recent",
+      highlights: [
+        "Built a Kafka-driven ingestion pipeline to normalize postings from 3+ sources into a unified schema",
+        "Deployed a semantic matching service using pgvector similarity search, Redis caching, and FastAPI",
+        "Delivered ranked job recommendations with an architecture designed for low-latency search and scalable indexing"
+      ],
+      icon: "fas fa-briefcase",
+      status: "Completed",
+      type: "Solo Developer"
     }
   ],
 
-  // Education section
   education: [
     {
       degree: "Master of Science in Computer Science",
       school: "Binghamton University, State University of New York",
       location: "Binghamton, NY",
-      duration: "Jan 2025 - May 2026",
+      duration: "Expected May 2026",
       gpa: "4.00/4.00",
       details: [
-        "Relevant Coursework: Artificial Intelligence, Machine Learning, NLP, Computer Vision, Algorithms, Systems Programming"
+        "Merit Scholarship Recipient",
+        "Coursework: Data Structures and Algorithms, Systems Programming, Artificial Intelligence, Machine Learning, Natural Language Processing"
       ]
     },
     {
       degree: "Bachelor of Engineering in Computer Engineering",
       school: "Gujarat Technological University",
-      location: "Gujarat, India",
-      duration: "Aug 2016 - Sep 2020",
+      location: "Ahmedabad, India",
+      duration: "Graduated Sep 2020",
       gpa: "3.85/4.00",
       details: []
     }
@@ -232,76 +281,89 @@ export const portfolioData = {
       "Java",
       "Python",
       "JavaScript",
-      "C++",
       "TypeScript",
       "SQL",
+      "PL/SQL",
+      "C++",
       "C"
     ],
     "Backend Development": [
       "Spring Boot",
+      "Spring MVC",
       "Spring Security",
       "Node.js",
       "Express.js",
+      "FastAPI",
       "Flask",
       "REST APIs",
-      "GraphQL",
-      "Microservices"
+      "Microservices",
+      "Distributed Systems",
+      "Kafka"
     ],
     "Frontend Development": [
-      "React",
+      "React.js",
+      "TypeScript",
       "Angular",
-      "HTML5",
-      "CSS3",
-      "TypeScript"
+      "HTML",
+      "CSS"
     ],
     "Cloud & DevOps": [
-      "AWS (EC2, S3, RDS, Lambda, CloudWatch)",
+      "AWS",
       "GCP",
       "Docker",
       "Kubernetes",
-      "Jenkins",
+      "GitLab CI/CD",
       "GitHub Actions",
-      "CI/CD"
+      "Linux",
+      "Amazon Linux",
+      "Datadog"
     ],
-    "Databases": [
+    Databases: [
+      "Oracle",
       "PostgreSQL",
       "MySQL",
-      "Oracle",
+      "MongoDB",
       "Redis",
-      "MongoDB"
+      "NoSQL",
+      "pgvector",
+      "Database Schema Design"
     ],
-    "Tools & Testing": [
-      "Git",
-      "Maven",
+    "Testing & Monitoring": [
       "JUnit",
       "PyTest",
-      "Jest",
-      "k6",
-      "Linux",
-      "Agile",
-      "TDD"
+      "Unit Testing",
+      "Integration Testing",
+      "Code Reviews",
+      "Polaris",
+      "BlackDuck"
     ],
-    "AI & Machine Learning": [
+    "Data & AI/ML": [
+      "scikit-learn",
+      "pandas",
+      "NumPy",
+      "ETL",
+      "Predictive Analytics",
       "PyTorch",
       "TensorFlow",
-      "Scikit-learn",
-      "NLP (Transformers, BERT)",
       "CNNs",
-      "GANs",
       "LLM APIs"
+    ],
+    Methodologies: [
+      "Agile",
+      "Scrum",
+      "SDLC"
     ]
   },
 
   achievements: [
-    "Delivered $1.2M annual savings through 92% performance optimization of PDF processing pipeline",
-    "Scaled distributed systems to 50K+ daily requests at 99.9% uptime with 5× traffic spike handling",
-    "Reduced release cycles by 60% while maintaining 99.5% uptime across 7 microservices",
-    "Eliminated 500+ security vulnerabilities, reducing production exposure by 85%",
-    "Drove 40% user growth through React/TypeScript dashboards at Global Health Impact",
-    "Improved student assignment scores by 18% through structured feedback and hands-on exercises",
-    "Maintained perfect 4.0 GPA in MS Computer Science program with AI specialization",
-    "5+ Star of the Month awards at TCS for exceptional project delivery and client satisfaction",
-    "Ranked 1st in TCS full-stack development certification program out of 200+ participants",
-    "Led technology learning sessions for 300+ junior developers at TCS"
+    "Saved $18K per month through AWS cloud cost optimization across 10 enterprise applications",
+    "Reduced access-related support tickets by 22% through distributed role-based access control across 10 microservices",
+    "Improved application response time by 30% and reduced user incidents by 19% through Java 11 modernization and Redis caching",
+    "Cut SharePoint upload time from 60 seconds to 10 seconds for 10K+ users with a multithreaded Java upload system",
+    "Delivered 40+ production deployments with zero-downtime rollback capability through CI/CD automation",
+    "Reduced manual reporting effort by 90% at Global Health Impact with ML-backed data pipelines",
+    "Maintained a 4.00 GPA in the MS Computer Science program at Binghamton University",
+    "Mentored 120+ students across database and object-oriented programming courses",
+    "Built full-stack and ML-backed portfolio projects spanning finance intelligence, job matching, distributed systems, and storage engines"
   ]
 };
