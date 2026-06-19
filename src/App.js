@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'aos/dist/aos.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -13,14 +12,16 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="portfolio-shell">
       <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );

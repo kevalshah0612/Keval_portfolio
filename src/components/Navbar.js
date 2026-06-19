@@ -1,70 +1,79 @@
-import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { portfolioData } from '../data/portfolioData';
 
-const NavigationBar = () => {
+const navItems = [
+  { id: 'home', label: 'Home' },
+  { id: 'systems', label: 'Systems' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'contact', label: 'Contact' }
+];
+
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const goToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setOpen(false);
   };
 
   return (
-    <Navbar 
-      expand="lg" 
-      variant="dark" 
-      fixed="top"
-      className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}
-    >
-      <Container>
-        <Navbar.Brand 
-          href="#home" 
-          className="fw-bold d-flex align-items-center"
-          onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
-        >
-          <i className="fas fa-code me-2 text-primary d-none d-sm-inline"></i>
-          <span className="navbar-brand-text">Keval Shah</span>
-        </Navbar.Brand>
-        
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0">
-          <span className="navbar-toggler-icon"></span>
-        </Navbar.Toggle>
-        
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            {[
-              { id: 'home', label: 'Home', icon: 'fas fa-home' },
-              { id: 'about', label: 'About', icon: 'fas fa-user' },
-              { id: 'experience', label: 'Experience', icon: 'fas fa-briefcase' },
-              { id: 'projects', label: 'Projects', icon: 'fas fa-project-diagram' },
-              { id: 'skills', label: 'Skills', icon: 'fas fa-cogs' },
-              { id: 'contact', label: 'Contact', icon: 'fas fa-envelope' }
-            ].map((section) => (
-              <Nav.Link
-                key={section.id}
-                href={`#${section.id}`}
-                onClick={(e) => { e.preventDefault(); scrollToSection(section.id); }}
-                className="nav-item-custom text-center"
-              >
-                <i className={`${section.icon} me-2 d-lg-inline`}></i>
-                <span className="nav-text">{section.label}</span>
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header className={`site-nav ${scrolled ? 'site-nav-scrolled' : ''}`}>
+      <a
+        className="brand-mark"
+        href="#home"
+        onClick={(event) => {
+          event.preventDefault();
+          goToSection('home');
+        }}
+        aria-label="Go to home"
+      >
+        <span className="brand-symbol">KS</span>
+        <span>
+          <strong>{portfolioData.personal.name}</strong>
+          <small>Backend, Full-Stack, AI-Assisted Tools</small>
+        </span>
+      </a>
+
+      <button
+        className="nav-toggle"
+        type="button"
+        onClick={() => setOpen((value) => !value)}
+        aria-label="Toggle navigation"
+        aria-expanded={open}
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav className={`nav-links ${open ? 'nav-links-open' : ''}`}>
+        {navItems.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={(event) => {
+              event.preventDefault();
+              goToSection(item.id);
+            }}
+          >
+            {item.label}
+          </a>
+        ))}
+        <a className="nav-resume" href={portfolioData.personal.resumes[0].href} target="_blank" rel="noreferrer">
+          Resume
+        </a>
+      </nav>
+    </header>
   );
 };
 
-export default NavigationBar;
+export default Navbar;
